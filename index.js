@@ -57,6 +57,10 @@ const player = new Fighter({
       imageSrc: "./img/Sprites/Fall.png",
       framesMax: 2,
     },
+    attack1: {
+      imageSrc: "./img/Sprites/Attack1.png",
+      framesMax: 6,
+    },
   },
 });
 
