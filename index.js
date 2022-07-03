@@ -33,12 +33,30 @@ const player = new Fighter({
     x: 0,
     y: 0,
   },
-  imageSrc: "./img/Sprites/idle.png",
+  imageSrc: "./img/Sprites/Idle.png",
   framesMax: 8,
   scale: 2.5,
   offset: {
     x: 115,
     y: 70,
+  },
+  sprites: {
+    idle: {
+      imageSrc: "./img/Sprites/Idle.png",
+      framesMax: 8,
+    },
+    run: {
+      imageSrc: "./img/Sprites/Run.png",
+      framesMax: 8,
+    },
+    jump: {
+      imageSrc: "./img/Sprites/Jump.png",
+      framesMax: 2,
+    },
+    fall: {
+      imageSrc: "./img/Sprites/Fall.png",
+      framesMax: 2,
+    },
   },
 });
 
@@ -92,14 +110,24 @@ const animate = () => {
   enemy.velocity.x = 0;
 
   //Player movement
+
   if (keys.a.pressed && player.lastKey === "a") {
     player.velocity.x = -5;
+    player.switchSprite("run");
   } else if (keys.d.pressed && player.lastKey === "d") {
     player.velocity.x = 5;
+    player.switchSprite("run");
+  } else {
+    player.switchSprite("idle");
   }
-
-  //Enemy movement
+  //Jumping
+  if (player.velocity.y < 0) {
+    player.switchSprite("jump");
+  } else if (player.velocity.y > 0) {
+    player.switchSprite("fall");
+  }
   if (keys.ArrowLeft.pressed && enemy.lastKey === "ArrowLeft") {
+    //Enemy movement
     enemy.velocity.x = -5;
   } else if (keys.ArrowRight.pressed && enemy.lastKey === "ArrowRight") {
     enemy.velocity.x = 5;
@@ -158,10 +186,10 @@ window.addEventListener("keydown", (e) => {
       player.lastKey = "a";
       break;
     case "w":
-      player.velocity.y = -20;
+      player.velocity.y = -30;
       break;
     case "W":
-      player.velocity.y = -20;
+      player.velocity.y = -30;
       break;
     case " ":
       player.attack();
