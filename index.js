@@ -220,7 +220,9 @@ const animate = () => {
   ) {
     enemy.takeHit();
     player.isAttacking = false;
-    document.querySelector("#enemyHealth").style.width = enemy.health + "%";
+    gsap.to("#enemyHealth", {
+      width: enemy.health + "%",
+    });
   }
 
   //If player misses
@@ -240,7 +242,9 @@ const animate = () => {
     player.takeHit();
     enemy.isAttacking = false;
 
-    document.querySelector("#playerHealth").style.width = player.health + "%";
+    gsap.to('#playerHealth', {
+      width:  player.health + "%"
+    })
   }
 
   // If Enemy misses
