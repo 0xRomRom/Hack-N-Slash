@@ -20,6 +20,7 @@
         width: 100%;
         align-items: center;
         padding: 20px;
+        border-radius: 0.2rem;
       "
     >
       <!-- Player Health-->
@@ -30,9 +31,10 @@
           width: 100%;
           display: flex;
           justify-content: flex-end;
+          border-radius: 0.2rem;
         "
       >
-        <div style="background-color: red; height: 30px; width: 100%"></div>
+        <div style="background-color: red; height: 30px; width: 100%; border-radius: 0.2rem"></div>
         <div
           id="playerHealth"
           style="
@@ -42,6 +44,7 @@
             right: 0;
             bottom: 0;
             width: 100%;
+            border-radius: 0.2rem;
           "
         ></div>
       </div>
@@ -49,7 +52,7 @@
       <div
         id="timer"
         style="
-          background-color: red;
+          background-color: rgb(0, 136, 255);
           width: 100px;
           height: 100px;
           flex-shrink: 0;
@@ -57,13 +60,15 @@
           justify-content: center;
           align-items: center;
           font-size: 40px;
+          border-radius: 0.2rem;
+          font-family: 'Montserrat', sans-serif;
         "
       >
         10
       </div>
       <!-- Enemy Health-->
       <div style="position: relative; height: 30px; width: 100%">
-        <div style="background-color: red; height: 30px"></div>
+        <div style="background-color: red; height: 30px; border-radius: 0.2rem"></div>
         <div
           id="enemyHealth"
           style="
@@ -73,6 +78,7 @@
             right: 0;
             bottom: 0;
             left: 0;
+            border-radius: 0.2rem;
           "
         ></div>
       </div>
@@ -91,6 +97,8 @@
         bottom: 0;
         left: 0;
         display: none;
+        border-radius: 0.2rem;
+        font-family: 'Montserrat', sans-serif;
       "
     >
       Tie
