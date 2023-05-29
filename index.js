@@ -104,11 +104,11 @@ const enemy = new Fighter({
   },
   sprites: {
     idle: {
-      imageSrc: "./img/SpritesV2/Idle.png",
+      imageSrc: "./img/SpritesV2/IdleS.png",
       framesMax: 4,
     },
     run: {
-      imageSrc: "./img/SpritesV2/Run.png",
+      imageSrc: "./img/SpritesV2/RunS.png",
       framesMax: 8,
     },
     jump: {
