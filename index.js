@@ -54,19 +54,19 @@ const player = new Fighter({
       framesMax: 2,
     },
     fall: {
-      imageSrc: "./img/Sprites/Fall.png",
+      imageSrc: "./img/Sprites/FallS.png",
       framesMax: 2,
     },
     attack1: {
-      imageSrc: "./img/Sprites/Attack1.png",
+      imageSrc: "./img/Sprites/Attack1S.png",
       framesMax: 6,
     },
     takeHit: {
-      imageSrc: "./img/Sprites/Take Hit - white silhouette.png",
+      imageSrc: "./img/Sprites/Take Hit - S.png",
       framesMax: 4,
     },
     death: {
-      imageSrc: "./img/Sprites/Death.png",
+      imageSrc: "./img/Sprites/DeathS.png",
       framesMax: 6,
     },
   },
